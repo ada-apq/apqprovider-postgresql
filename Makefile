@@ -2,6 +2,13 @@
 #
 # @author Marcelo Coraça de Freitas <marcelo@kow.com.br> 
 
+ifndef ($(PREFIX))
+	PREFIX=/usr/local
+endif
+INCLUDE_PREFIX=$(PREFIX)/include/apqprovider-postgresql
+LIB_PREFIX=$(PREFIX)/lib
+GPR_PREFIX=$(LIB_PREFIX)/gnat
+
 
 projectFile="apq_provider-postgresql.gpr"
 
