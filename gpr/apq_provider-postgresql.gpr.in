@@ -1,0 +1,34 @@
+-- Build file for Aw_Lib.
+--
+-- author Marcelo Coraça de Freitas <marcelo.batera@gmail.com> 
+--
+-- Repository information:
+-- $Date: 2008-02-25 19:47:48 -0300 (Seg, 25 Fev 2008) $
+-- $Revision: 234 $
+-- $Author: ogro $
+
+
+with "apq.gpr";
+with "apq-postgresql.gpr";
+with "apq_provider.gpr";
+
+project APQ_Provider.postgresql is
+
+	version := APQ_Provider.Version; 
+	prefix	:= $prefix;
+	
+	
+	for Source_Dirs use ( prefix & "/include" );
+	for Library_Dir use prefix & "/lib/apqprovider-postgresql";
+	for Library_Name use "apq_provider-postgresql";
+	for Library_Version use "libapq_provider-postgresql.so." & Version;
+	for Library_Kind use APQ_Provider'Library_Kind;
+
+	
+	
+	package Compiler is
+		for Default_Switches ("ada") use ("-O2", "-gnat05");
+	end Compiler;
+
+end APQ_Provider.postgresql;
+
