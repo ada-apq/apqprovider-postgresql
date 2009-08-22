@@ -23,6 +23,7 @@ project APQ_Provider.postgresql is
 	for Library_Name use "apq_provider-postgresql";
 	for Library_Version use "libapq_provider-postgresql.so." & Version;
 	for Library_Kind use APQ_Provider'Library_Kind;
+	for Externally_Built use "true";
 
 	
 	

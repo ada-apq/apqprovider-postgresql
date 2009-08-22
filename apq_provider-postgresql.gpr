@@ -8,8 +8,6 @@
 -- $Author: ogro $
 
 
-with "kow_framework_setup.gpr";
-
 with "apq.gpr";
 with "apq-postgresql.gpr";
 with "apq_provider.gpr";
@@ -21,9 +19,10 @@ project APQ_Provider.postgresql is
 	
 	for Source_Dirs use ( "src" );
 	for Object_Dir use "obj";
+	for Library_Dir use "lib";
 	for Library_Name use "apq_provider-postgresql";
 	for Library_Version use "libapq_provider-postgresql.so." & Version;
-	for Library_Kind use kow_framework_Setup'Library_Kind;
+	for Library_Kind use APQ_Provider'Library_Kind;
 
 	
 	
