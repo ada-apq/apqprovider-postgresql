@@ -14,7 +14,7 @@ with "apq_provider.gpr";
 
 project APQ_Provider.postgresql is
 
-	version := APQ_Provider.Version; 
+	version := $version;
 	
 	
 	for Source_Dirs use ( "src" );
