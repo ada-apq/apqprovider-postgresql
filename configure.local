@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# 
+# Local configuration file for KOW Lib
+
+
+
+project="apqprovider-postgresql"
+
+check_project apq
+check_project apq-postgresql
+check_project apqprovider
+
+set_configuration APQPROVIDERPOSTGRESQL_EXTERNALLY_BUILT "false"
